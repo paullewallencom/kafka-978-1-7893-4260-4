@@ -1,0 +1,10 @@
+Question,Question Type (multiple-choice or multi-select),Answer Option 1,Answer Option 2,Correct Responses,Explanation
+I should block the producer.send() by adding .get() at the end,multiple-choice,No!,Yes!,1,"Do not block your .send(). Instead, make sure to .close() your producer before shutting down your application"
+Producing with a key allows to...,multiple-choice,add more information to my message,ensure the messages that have the same keys go to the same partition,2,
+If I don't use a key (or set key=null),multiple-choice,the messages will be sent always to the same partition,the messages will be sent to all partitions in a round-robin fashion,2,
+"To allows consumers in a group to resume at the right offset, I need to set ",multiple-choice,auto.offset.resets,group.id,2,
+When my consumers have the same group.id,multiple-choice,they will read from mutually-exclusive partitions,they will all read all the partitions,1,
+If a consumer joins or leaves a group,multiple-choice,Nothing happens,A rebalance happens to assign partitions to all the consumers,2,
+We usually use .assign() and .seek()  for...,multiple-choice,Normal consumer operations,Replay capability at a certain offset,2,
+Can a Kafka client version 0.11 send and read data from a 2.0 broker?,multiple-choice,Yes ,No,1,Kafka brokers have backward compatibility enabled
+Can a Kafka Client v2.0 talk to a Kafka Broker v1.0?,multiple-choice,Yes,No,1,Kafka brokers have forward compatibility enabled

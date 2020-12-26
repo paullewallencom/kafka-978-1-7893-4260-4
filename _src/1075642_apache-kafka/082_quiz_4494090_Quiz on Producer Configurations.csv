@@ -1,0 +1,7 @@
+Question,Question Type (multiple-choice or multi-select),Answer Option 1,Answer Option 2,Answer Option 3,Answer Option 4,Correct Responses,Explanation
+"if I want to have an extremely high confidence that leaders and replicas have my data, I should use",multiple-choice,"acks=1, replication factor=3, min.insync.replicas=2","acks=all, replication factor=2, min.insync.replicas=1","acks=all, replication factor=3, min.insync.replicas=1","acks=all, replication factor=3, min.insync.replicas=2",4,"this is the strongest guarantee, 2 replicas (including leader) will have the data otherwise the producer will not receive an ack"
+"To prevent duplicates in Kafka introduced by the network, I should use",multiple-choice,retries=200000,enable.idempotence=true,max.in.flight.requests.per.connection=1,,2,
+message compression by default is enabled,multiple-choice,yes,no,,,2,
+when I compress my messages from the producer side,multiple-choice,the brokers have to de-compress them,the consumers have to de-compress them,,,2,only consumers de-compress the messages!
+"to enhance compression, I can increase the chances of batching by using",multiple-choice,linger.ms=20,batch.size=65536,,,1,Lingering allows to wait a bit of time before sending messages and increases chances of batching
+"The rule ""same key goes to the same partition"" is true unless...",multiple-choice,the number of partition changes,the number of producer changes,,,1,
